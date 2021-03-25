@@ -1,16 +1,18 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import express, { Request, Response } from 'express';
+import cors from 'cors';
+import router from './api/api';
 
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-const port = 3001;
+app.use('/api', router);
 
-app.get('/', (req, res) => {
+const port: number = 3001;
+
+app.get('/', (req: Request, res: Response) => {
   res.send('coucou, nodemon ????!?????');
 });
 
