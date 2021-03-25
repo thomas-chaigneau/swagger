@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const port = 3001;
 
 app.get('/', (req, res) => {
-  res.send('coucou!');
+  res.send('coucou, nodemon ????!?????');
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
