@@ -20,4 +20,7 @@ app.get('/', (req: Request, res: Response) => {
   res.send('coucou, nodemon ????!?????');
 });
 
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
+  console.log(`swagger doc in http://localhost:${port}/doc/`)
+});
