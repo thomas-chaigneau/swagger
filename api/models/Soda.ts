@@ -1,4 +1,5 @@
 import { TViscosity } from '../../constants/types';
+import { SchemaObject } from '../../swagger/types';
 
 class Soda {
   name: string;
@@ -15,6 +16,28 @@ class Soda {
   }
 }
 
+const sodaSchemaObject: SchemaObject = {
+  type: "object",
+  properties: {
+    name: {
+      type: "string"
+    },
+    isFromFruit: {
+      type: "boolean"
+    },
+    price: {
+      type: "integer",
+    },
+    sugarPercentage: {
+      type: "integer",
+    },
+    viscosity: {
+      type: "string",
+    }
+  },
+}
+
 export {
   Soda,
+  sodaSchemaObject,
 }
